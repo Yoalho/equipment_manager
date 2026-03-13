@@ -1763,11 +1763,11 @@ def delete_user(user_id: int):
     return redirect(url_for("admin_page"))
 
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     print("\nLab Equipment Manager is ready.")
     print("Default admin login -> username: admin | password: admin123\n")
 
-    import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
